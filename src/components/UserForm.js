@@ -4,7 +4,7 @@ import { updateName, updateEmail } from "./Actions";
 
 const UserForm = () => {
     let dispatch = useDispatch();
-    let name = useSelector(state => state.name);  // ✅ Ensure correct state structure
+    let name = useSelector(state => state.name);  
     let email = useSelector(state => state.email);
 
     return (
@@ -14,13 +14,13 @@ const UserForm = () => {
                 type="text"
                 placeholder="Enter Name"
                 value={name}
-                onChange={(e) => dispatch(updateName(e.target.value))} // ✅ Correctly dispatch action
+                onChange={(e) => dispatch(updateName(e.target.value))} 
             />
             <input
                 type="email"
                 placeholder="Enter Email"
                 value={email}
-                onChange={(e) => dispatch(updateEmail(e.target.value))} // ✅ Correctly dispatch action
+                onChange={(e) => dispatch(updateEmail(e.target.value))} 
             />
             <section className="output">
                 <p>Name - {name}</p>
